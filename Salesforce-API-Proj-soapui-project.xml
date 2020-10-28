@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:enterprise.soap.sforce.com" xmlns:urn1="urn:sobject.enterprise.soap.sforce.com">
-   <soapenv:Header>
-      <urn:SessionHeader>
-         <urn:sessionId>00D2w00000FaS4P!ARIAQJM5K5tfU_NLzi.Th036Ko09heqJS7ujGsuex0FF3N1sayqsdVyUOaIyqewSG4RkLQR_57AXd3yWPlJ0BMdh3pmt2Q9y</urn:sessionId>
-      </urn:SessionHeader>
-   </soapenv:Header>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sf="urn:fault.enterprise.soap.sforce.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <soapenv:Body>
-      <urn:create>
-         <!--Zero or more repetitions:-->
-         <urn:sObjects xsi:type="urn1:Account" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            <Name>Sample Soap Acc</Name>
-            <Industry>Agriculture</Industry>
-            <Type>Prospect</Type>
-         </urn:sObjects>
-      </urn:create>
+      <soapenv:Fault>
+         <faultcode>UNKNOWN_EXCEPTION</faultcode>
+         <faultstring>UNKNOWN_EXCEPTION: Destination URL not reset. The URL returned from login must be set in the SforceService</faultstring>
+         <detail>
+            <sf:UnexpectedErrorFault xsi:type="sf:UnexpectedErrorFault">
+               <sf:exceptionCode>UNKNOWN_EXCEPTION</sf:exceptionCode>
+               <sf:exceptionMessage>Destination URL not reset. The URL returned from login must be set in the SforceService</sf:exceptionMessage>
+            </sf:UnexpectedErrorFault>
+         </detail>
+      </soapenv:Fault>
    </soapenv:Body>
 </soapenv:Envelope>
